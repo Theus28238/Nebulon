@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="Main.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nebulon Store</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
   <header>
     <div id="localUp">
       <nav>
         <a class="menu logo" href="#">Nebulon</a>
-        <div class="mobile-menu">
+        <div class="mobile-menu" aria-label="Menu móvel" role="button" tabindex="0">
           <div class="line1"></div>
           <div class="line1"></div>
           <div class="line1"></div>
@@ -22,43 +21,55 @@
           <li><a href="#">Moda Masculina</a></li>
           <li><a href="#">Moda Feminina</a></li>
           <li><a href="#">Infantil</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Registre-se</a></li>
+          <li><a href="Login.html">Login</a></li>
+          <li><a href="Registro.html">Registre-se</a></li>
           <li><a href="#">Suporte</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-
   <section class="bannerCamisa">
     <div class="textBanner">
       <h1>Nova Coleção Nebulon</h1>
-      <a href="#" class="View">Ver agora</a>
+      <a href="ViewProduct.html" class="View">Ver agora</a>
     </div>
   </section>
+
   <div class="product-container">
     <div class="product-card">
-      <img src="Camisas/CamisaBrancaVermelha.png" alt="" class="c223">
+      <img src="../Camisas/CamisaBrancaVermelha.png" alt="Camisa Nebulon NullFrame" />
       <p class="p1">Camisa de compressão Nebulon NullFrame <br>R$119,90</p>
       <a href="ViewProduct.html"><button>Comprar</button></a>
     </div>
-  
+
     <div class="product-card">
-      <img src="Camisas/CamisaPretaVerme.png" alt="" class="c223">
+      <img src="../Camisas/CamisaPretaVerme.png" alt="Camisa Nebulon Bloodsignal" />
       <p class="p1">Camisa de compressão Nebulon Bloodsignal <br>R$119,90</p>
       <a href="#"><button>Comprar</button></a>
     </div>
 
     <div class="product-card">
-      <img src="Camisas/CamisaBrancaPret.png" alt="" class="c223">
+      <img src="../Camisas/CamisaBrancaPret.png" alt="Camisa Nebulon Bloodsignal" />
       <p class="p1">Camisa de compressão Nebulon Bloodsignal <br>R$119,90</p>
       <a href="#"><button>Comprar</button></a>
     </div>
   </div>
-  
-  <main>
 
-  </main>
+  <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navList.classList.toggle('active');
+      }
+    });
+  </script>
 </body>
 </html>

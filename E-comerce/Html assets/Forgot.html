@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/Forgot.css">
+  <title>Recuperar Senha | Nebulon Store</title>
+</head>
+<body>
+  <header class="header">
+      <a href="Menu.html" class="logo">NEBULON</a>
+  </header>
+
+  <div class="login-page">
+    <div class="login-box">
+      <h2>Recuperar senha</h2>
+      <p>Insira seu email e enviaremos um link para redefinir sua senha.</p>
+      <form class="login-form">
+        <label for="email">Email cadastrado</label>
+        <input type="email" id="email" placeholder="seu@email.com" required>
+
+        <button type="submit" onclick="recuperarSenha(event)">Enviar link</button>
+
+        <div class="extra-links">
+          <a href="login.html">Voltar ao login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const recuperarSenha = (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+
+      if (!email) {
+        alert("Por favor, insira seu email.");
+        return;
+      }
+
+      // Aqui você enviaria o email pro back-end ou serviço de autenticação
+      alert("Se esse email estiver cadastrado, enviaremos um link de recuperação.");
+
+      // Redireciona de volta para o login (opcional)
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2000);
+    };
+  </script>
+</body>
+</html>

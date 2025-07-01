@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/Login.css">
+  <title>Login | Nebulon Store</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="Menu.html" class="logo">NEBULON</a>
+  </header>
+
+  <div class="login-page">
+    <div class="login-box">
+      <h2>Bem-vindo de volta</h2>
+      <p>Acesse sua conta Nebulon</p>
+      <form class="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="seu@email.com" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="********" required>
+
+       <button type="submit" onclick="redirecionamentoLogin(event)">Entrar</button>
+        <div class="extra-links">
+          <a href="Forgot.html">Esqueci minha senha</a>
+          <span>•</span>
+          <a href="Registro.html">Criar conta</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script>
+  const redirecionamentoLogin = (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value.trim();
+
+    if(!email || !senha ){
+      alert("Algo está errado. Por favor, verifique o email e a senha novamente")
+      return;
+    }
+
+    window.location.href =  "http://127.0.0.1:3000/Nebulon/E-comerce/Menu.html"
+  };
+</script>
+</html>

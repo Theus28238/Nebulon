@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camisa Void of the Shadow | Nebulon Store</title>
+  <link rel="stylesheet" href="../css/StyleViewProduct.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="Menu.html" class="logo">NEBULON</a>
+
+      <!-- Botão hamburguer para mobile -->
+      <div id="menuToggle" class="menu-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul id="navList" class="nav-list">
+        <li><a href="#">Novidades</a></li>
+        <li><a href="#">Moda Masculina</a></li>
+        <li><a href="#">Moda Feminina</a></li>
+        <li><a href="#">Infantil</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Registro.html">Registre-se</a></li>
+        <li><a href="#">Suporte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-main">
+    <section class="gallery-section">
+      <div class="thumbnails">
+        <img src="../Camisas/CamisaBrancaVermelha.png" alt="Thumbnail 1" class="thumb selected" data-full="Camisas/CamisaBrancaVermelha.png"/>
+        <img src="../Camisas/CamisaPretaVerme.png" alt="Thumbnail 2" class="thumb" data-full="Camisas/CamisaPretaVerme.png"/>
+        <img src="../Camisas/CamisaBrancaPret.png" alt="Thumbnail 3" class="thumb" data-full="Camisas/CamisaBrancaPret.png"/>
+      </div>
+      <div class="main-image-container">
+        <img id="mainImage" src="../Camisas/CamisaBrancaVermelha.png" alt="Camisa Void of the Shadow" />
+      </div>
+    </section>
+
+    <section class="product-info">
+      <h1 class="product-title">Camisa de Compressão NullFrame</h1>
+
+      <div class="price-section">
+        <span class="price">R$119,90</span>
+        <span class="installments">10x de R$11,99 sem juros</span>
+      </div>
+
+      <div class="rating-section" aria-label="Avaliação do produto: 5 de 5 estrelas">
+        <div class="stars">
+          <span class="star full">★</span>
+          <span class="star full">★</span>
+          <span class="star full">★</span>
+          <span class="star full">★</span>
+          <span class="star full">★</span>
+        </div>
+        <span class="reviews-count">(58 avaliações)</span>
+      </div>
+
+      <div class="sizes">
+        <label>Tamanho:</label>
+        <button class="size-btn">P</button>
+        <button class="size-btn">M</button>
+        <button class="size-btn">G</button>
+        <button class="size-btn">GG</button>
+      </div>
+
+      <div class="quantity-control">
+        <label for="qtyInput">Quantidade:</label>
+        <button id="decreaseQty" aria-label="Diminuir quantidade">-</button>
+        <input type="text" id="qtyInput" value="1" readonly />
+        <button id="increaseQty" aria-label="Aumentar quantidade">+</button>
+      </div>
+
+      <button class="buy-btn">COMPRAR</button>
+
+      <div class="stock-status">Em estoque</div>
+
+      <section class="description">
+        <h2>Descrição</h2>
+        <p>Camisa de compressão NullFrame, com tecido de alta qualidade para conforto e desempenho. Design exclusivo Nebulon, perfeito para treinos intensos e uso casual.</p>
+        <p>Material: Poliéster e elastano, pré-encolhido para melhor durabilidade. Disponível nas cores preto e branco.</p>
+        <p>*Recomenda-se pegar um tamanho menor para fit ultra apertado.</p>
+        <p>Preste atenção no comprimento para o fit perfeito.</p>
+      </section>
+    </section>
+  </main>
+
+  <section class="recommendations">
+    <h2>Produtos similares</h2>
+    <div class="products-carousel">
+      <div class="rec-product">
+        <img src="../Camisas/CamisaBrancaVermelha.png" alt="Camisa NullFrame" />
+        <p>NullFrame</p>
+        <span>R$119,90</span>
+      </div>
+      <div class="rec-product">
+        <img src="../Camisas/CamisaPretaVerme.png" alt="Camisa Bloodsignal" />
+        <p>Bloodsignal</p>
+        <span>R$119,90</span>
+      </div>
+      <div class="rec-product">
+        <img src="../Camisas/CamisaBrancaPret.png" alt="Camisa Bloodsignal" />
+        <p>Bloodsignal</p>
+        <span>R$119,90</span>
+      </div>
+      <div class="rec-product">
+        <img src="../Camisas/CamisaBrancaVermelha.png" alt="Camisa NullFrame" />
+        <p>NullFrame</p>
+        <span>R$119,90</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="../javaScript/ProductScript.js"></script>
+</body>
+</html>
