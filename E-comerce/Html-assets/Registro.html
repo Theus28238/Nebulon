@@ -30,7 +30,7 @@
         <label for="confirmarSenha">Confirmar senha</label>
         <input type="password" id="confirmarSenha" placeholder="********" required>
 
-        <button type="submit" onclick="registrarPerfil(event)">Registrar</button>
+        <button type="submit" id="enviar" onclick="registrarPerfil(event)">Registrar</button>
 
         <div class="extra-links">
           <a href="login.html">Já tem conta? Entrar</a>
@@ -39,35 +39,7 @@
     </div>
   </div>
 
-  <script>
-    const registrarPerfil = (e) => {
-      e.preventDefault();
-
-      const nome = document.getElementById("nome").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const senha = document.getElementById("senha").value.trim();
-      const confirmarSenha = document.getElementById("confirmarSenha").value.trim();
-
-      if (!nome || !email || !senha || !confirmarSenha) {
-        alert("Preencha todos os campos.");
-        return;
-      }
-
-      if (senha.length < 6) {
-        alert("A senha deve ter pelo menos 6 caracteres.");
-        return;
-      }
-
-      if (senha !== confirmarSenha) {
-        alert("As senhas não coincidem.");
-        return;
-      }
-
-      // Aqui você pode enviar os dados para o servidor (PHP, Node, etc.)
-      // Por enquanto, redireciona:
-      alert("Conta criada com sucesso!");
-      window.location.href = "http://127.0.0.1:3000/Nebulon/E-comerce/Menu.html";
-    };
+  <script src="../javaScript/back.js">
   </script>
 </body>
 </html>
